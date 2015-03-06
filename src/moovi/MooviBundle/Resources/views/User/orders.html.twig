@@ -1,0 +1,36 @@
+{% extends 'mooviMooviBundle::layout-one.html.twig' %}
+
+
+
+{% block content %}
+
+	<div class="row">
+        <table class="table table-striped">
+            <caption>Zamówienia użytkownika <strong>{{ user.username }}</strong></caption>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Film</th>
+                        <th>Status</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for order in user.orders %}
+                    <tr>
+                        <th scope="row">{{ order.id }}</th>
+
+                    {% if order.status == 0 %}
+                        <td>{{ order.movie.title }}</td>
+                        <td>w trakcie</td>
+                    {% else %}
+                        <td>{{ order.movie.title }} - <a href="#" onclick="alert('Nie ogladniesz!');return false;">Ogladaj</a></td>
+                        <td>zaplacone</td>
+                    {% endif %}
+                        <td>{{ order.price }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+        </table>
+    </div>
+{% endblock %}

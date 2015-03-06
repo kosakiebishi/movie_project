@@ -1,0 +1,27 @@
+{% extends 'mooviMooviBundle::layout-one.html.twig' %}
+
+
+
+{% block content %}
+
+    <div class="row">
+        <div class="page-header">
+            <h1>Wszystkie filmy</h1>
+        </div>
+
+
+        {% for movie in movies %}
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="{{ path('moovi_movie_display', {'slug': movie.slug}) }}"><img src="{{ movie.cover }}" alt="{{ movie.title }}" height="200" width="200" /></a>
+                    <div class="caption">
+                        <h3> <a href="{{ path('moovi_movie_display', {'slug': movie.slug}) }}">{{ movie.title }}</a></h3>
+
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+{% endblock %}

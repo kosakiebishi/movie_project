@@ -1,0 +1,9 @@
+{% extends 'mooviMooviBundle::layout.html.twig' %}
+
+{% block content %}
+	{{ form_start(form) }}
+
+	{{ form_errors(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,20 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>VOD</title>
+	<link rel="stylesheet" href="{{ asset('bundles/moovimoovi/css/bootstrap.min.css') }}" type="text/css" />
+	<link rel="stylesheet" href="{{ asset('bundles/moovimoovi/css/app.css') }}" type="text/css" />
+</head>
+<body>
+	{% include 'mooviMooviBundle:_partials:navbar.html.twig' %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

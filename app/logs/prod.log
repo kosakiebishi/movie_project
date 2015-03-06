@@ -1,0 +1,4 @@
+[2015-03-06 14:33:46] request.INFO: Matched route "moovi_moovi_homepage" (parameters: "_controller": "moovi\MooviBundle\Controller\WelcomeController::indexAction", "_route": "moovi_moovi_homepage") [] []
+[2015-03-06 14:33:46] security.INFO: Populated SecurityContext with an anonymous Token [] []
+[2015-03-06 14:33:46] request.CRITICAL: Uncaught PHP Exception PDOException: "SQLSTATE[42000] [1049] Unknown database 'symfony'" at /var/www/symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php line 40 {"exception":"[object] (PDOException(code: 1049): SQLSTATE[42000] [1049] Unknown database 'symfony' at /var/www/symfony/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:40)"} []
+[2015-03-06 14:33:46] security.DEBUG: Write SecurityContext in the session [] []

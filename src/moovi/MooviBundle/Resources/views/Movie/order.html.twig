@@ -1,0 +1,15 @@
+{% extends 'mooviMooviBundle::layout-one.html.twig' %}
+
+
+{% block content %}
+
+    <div  class="row">
+        <h2>Informacje o zamówieniu</h2>
+        <h4>{{ order.movie.title }}</h4>
+        <h5>Cena: {{ order.price|number_format  }} zł</h5>
+        <h5>Termin płatności: <strong>{{ "now" | date_modify("+7 days")|date("m/d/Y") }}</strong></h5>
+        <h5>Płatność osobista :)</h5>
+
+    </div>
+
+{% endblock %}

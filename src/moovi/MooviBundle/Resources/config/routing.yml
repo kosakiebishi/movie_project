@@ -1,0 +1,42 @@
+moovi_moovi_homepage:
+  path: /
+  defaults: { _controller: mooviMooviBundle:Welcome:index }
+
+# movies
+moovi_movie_list:
+  path:     /movies
+  defaults: { _controller: mooviMooviBundle:Movie:index }
+
+moovi_movie_add:
+  path:   /movies/add
+  defaults: { _controller: mooviMooviBundle:Movie:add }
+
+moovi_movie_display:
+  path:   /movies/{slug}
+  defaults: { _controller: mooviMooviBundle:Movie:display }
+
+#order
+moovi_movie_order:
+  path: /movies/{slug}/order
+  defaults: { _controller: mooviMooviBundle:Movie:order }
+
+#user-orders
+moovi_user_orders:
+  path: /my-orders
+  defaults: { _controller: mooviMooviBundle:User:orders }
+
+#comments
+moovi_movie_add_coment:
+  path: /movies/{slug}/new-comment
+  defaults: { _controller: mooviMooviBundle:Comment:add }
+
+
+moovi_actor_add:
+  path: 	/actors/add
+  defaults: { _controller: mooviMooviBundle:Actor:add }
+
+# genres
+moovi_genre_add:
+  path:   /genres/add
+  defaults: { _controller: mooviMooviBundle:Genre:add }
+
